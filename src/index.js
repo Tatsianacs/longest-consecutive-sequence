@@ -1,3 +1,7 @@
+/*
+Seeing that sort array is used, complexity is n*Lon(n)
+ */
+
 module.exports =
 function longestConsecutiveLength(array) {
     if (array === undefined || array.length == 0) {
