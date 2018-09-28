@@ -8,8 +8,11 @@ function longestConsecutiveLength(array) {
     var max = 1;
     var newarray = [];
     //console.log(array);
-    for (var i = 0; i < (array.length -1); i++) {
-      if (array[i + 1] == array[i] + 1) {
+    for (var i = 0; i < (array.length - 1); i++) {
+        if (array[i + 1] === array[i]) {
+            //ignore number if duplicate
+        continue;
+        } else if (array[i + 1] === array[i] + 1) {
         count++;
       } else {
         if (count > max) {
@@ -19,7 +22,7 @@ function longestConsecutiveLength(array) {
       }
     }
     return max;
-  }
+  };
 
   function compareNumbers(a, b) {
     return a - b;
